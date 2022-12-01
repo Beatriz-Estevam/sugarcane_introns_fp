@@ -1,0 +1,89 @@
+1 - Tentando usar o spliceator
+Fonte: https://git.unistra.fr/nscalzitti/spliceator 
+
+code:
+    git clone https://git.unistra.fr/nscalzitti/spliceator.git
+
+output:
+    Cloning into 'spliceator'...
+    remote: Enumerating objects: 168, done.
+    remote: Counting objects: 100% (30/30), done.
+    remote: Compressing objects: 100% (27/27), done.
+    remote: Total 168 (delta 18), reused 5 (delta 3), pack-reused 138
+    Receiving objects: 100% (168/168), 196.00 MiB | 867.00 KiB/s, done.
+    Resolving deltas: 100% (61/61), done.
+    Updating files: 100% (130/130), done.
+
+code: Virtual Environment for splcieator
+    conda create --name spliceator_env --file requirements.txt python=3.7
+    
+    ./Spliceator -f my_fasta.file -o my_output_file.csv
+    ./Spliceator -f my_fasta.file
+
+
+
+2 - Tentando usar o SpliceAI
+Fonte: https://github.com/Illumina/SpliceAI 
+
+code:
+    conda create -n spliceAI_env python=3
+    conda activate spliceAI_env 
+    conda install -c bioconda spliceai
+
+output:
+
+
+
+!!!!!!!3- SpliceFinder
+Fonte: https://github.com/deepomicslab/SpliceFinder
+
+code:
+    conda create -n SpliceFinder_env python=3
+    conda activate  SpliceFinder_env 
+    git clone https://github.com/deepomicslab/SpliceFinder.git
+
+output:
+    http://www.htslib.org/download/
+
+problemas na instalação do SAMtools para: Samtools should be installed to obtain the sequence information.
+
+./configure --prefix=/home/bia/sugarcane_introns/1_testing_introns_predictors/SpliceFinder/samtools-1.16.1
+checking for gawk... gawk
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for C compiler warning flags... -Wall
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking location of HTSlib source tree... htslib-1.16
+checking for NcursesW wide-character library... no
+checking for Ncurses library... no
+checking for Curses library... no
+configure: error: curses development files not found
+
+The 'samtools tview' command uses the curses text user interface library.
+Building samtools with tview requires curses/ncurses/etc development files
+to be installed on the build machine; you may need to ensure a package such
+as libncurses5-dev (on Debian or Ubuntu Linux) or ncurses-devel (on RPM-based
+Linux distributions) is installed.
+
+FAILED.  Either configure --without-curses or resolve this error to build
+samtools successfully.
+
+
+!!!!!! 4 - NetGene2
+
+Fiz o Download do site deles e estava mudando o Makefile, mas na hora que colocar o caminho para
+os external package para instalar eles o http://www.cse.ucsc.edu/research/compbio/sam.html não funciona
+
+!!! 5 - GeneSplicer 
+Fonte: https://www.cbcb.umd.edu/software/GeneSplicer/gene_spl.shtml
+
+
